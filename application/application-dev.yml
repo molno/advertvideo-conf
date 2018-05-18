@@ -68,7 +68,7 @@ kcloud:
         port: 8060
         hostname: localhost
       uac:
-        port: 8000
+        port: 8008
         hostname: localhost
     web:
       mall:

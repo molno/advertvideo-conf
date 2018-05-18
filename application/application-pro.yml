@@ -1,32 +1,119 @@
-server:
-  port: 8080
 spring:
   profiles:
-    active: @profileActive@
-  application:
-    name: @pom.artifactId@
-  boot:
-    admin:
-      username: ${security.user.name:admin}
-      password: ${security.user.password:admin}
-info:
-  owner: paascloud.net@gmail.com
-  version: @project.version@
+    active: pro
+  rabbitmq:
+    host: 47.96.173.142
+    port: 5672
+    username: guest
+    password: guest
+  redis:
+    host: 47.96.173.142
+    password: paascloud@redis
+    port: 6379
+    timeout: 0
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: paascloud
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    initial-size: 10
+    min-idle: 10
+    max-active: 20
+    test-on-borrow: true
 
-eureka
+security:
+  user:
+    name: admin
+    password: admin
+    
+eureka:
   client:
     serviceUrl:
-      defaultZone: http://root:root@localhost:8761/eureka/
-    instance:
-      instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
-
-security: # 配置中心的用户名密码
-  basic:
-    enabled: ${security.basic.enabled:true}
-  user:
-    name: ${security.user.name:admin}
-    password: ${security.user.password:admin}
-logging:
-  level.root: info
-  path: logs/
-  file: ${spring.application.name}.log
+      defaultZone: http://admin:admin@localhost:8761/eureka/
+kcloud:
+  server:
+    eureka:
+      port: 8761
+      hostname: localhost
+      serviceUrl: http://admin:admin@localhost:8761/eureka/
+    conf:
+      port: 8080
+      hostname: localhost
+      serviceUrl: http://localhost:8080
+    gateway:
+      port: 80
+      hostname: localhost
+    monitor:
+      port: 8010
+      hostname: localhost
+      serviceUrl: localhost:8010
+    zipkin:
+      port: 8020
+      hostname: localhost
+      serviceUrl: http://localhost:8020
+    provider:
+      ehc:
+        port: 8040
+        hostname: localhost
+      mdc:
+        port: 8030
+        hostname: localhost
+      omc:
+        port: 8050
+        hostname: localhost
+      opc:
+        port: 8070
+        hostname: localhost
+      ptc:
+        port: 8060
+        hostname: localhost
+      uac:
+        port: 8000
+        hostname: localhost
+    web:
+      mall:
+        port: 9000
+        hostname: localhost
+  auth:
+    jwt:
+      expiredRemainMinutes: 20
+      expiredMinutes: 120
+  mail:
+    host: smtp.sina.com
+    username: 'your email address'
+    password: 'your email password'
+    test-connection: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 2500
+          starttls:
+            enable: true
+            required: true
+  aliyun:
+    key:
+      accessKeyId: 'your aliyun accessKeyId'
+      accessKeySecret: 'your aliyun accessKeySecret'
+    rocketMq:
+      namesrvAddr: 47.96.173.142:9876
+    sms:
+      signName: 快乐学习网
+      regionId: cn-beijing
+      endpoint:
+      endpointName: cn-beijing
+      product: 'your sms product'
+      domain: dysmsapi.aliyuncs.com
+  qiniu:
+    key:
+      accessKey: 'your qiniu accessKey'
+      secretKey: 'your qiniu secretKey'
+    oss:
+      privateHost: 'your qiniu oss private host'
+      publicHost: 'your qiniu oss public host'
+  alipay:
+    callback:
+      url: http://dev-api.paascloud.net/omc/pay/alipayCallback
+    qrCode:
+      pcPath: E:/File/alipay/QRCode
+      qiniuPath: alipay/QRCode/
