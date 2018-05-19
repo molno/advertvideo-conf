@@ -13,8 +13,8 @@ spring:
     timeout: 0
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    username: paascloud
-    password: 123456
+    username: root
+    password: 
     type: com.alibaba.druid.pool.DruidDataSource
     initial-size: 10
     min-idle: 10
