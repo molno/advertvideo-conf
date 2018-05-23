@@ -64,7 +64,7 @@ kcloud:
       opc:
         port: 8070
         hostname: localhost
-      ptc:
+      tpc:
         port: 8060
         hostname: localhost
       uac:
