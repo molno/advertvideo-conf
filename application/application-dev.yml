@@ -41,7 +41,7 @@ kcloud:
       hostname: localhost
       serviceUrl: http://localhost:8080
     gateway:
-      port: 80
+      port: 8888
       hostname: localhost
     monitor:
       port: 8010
