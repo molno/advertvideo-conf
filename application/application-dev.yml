@@ -80,8 +80,8 @@ kcloud:
       expiredMinutes: 120
   mail:
     host: smtp.sina.com
-    username: 'your email address'
-    password: 'your email password'
+    username: kuyuntech@163.com
+    password: 13763393911
     test-connection: false
     properties:
       mail:
@@ -93,12 +93,12 @@ kcloud:
             required: true
   aliyun:
     key:
-      accessKeyId: 'your aliyun accessKeyId'
-      accessKeySecret: 'your aliyun accessKeySecret'
+      accessKeyId: LTAI2flAE5PmIbSC
+      accessKeySecret: NVK3zlsUCZddv0M8fG9NVXydWK3IwR
     rocketMq:
       namesrvAddr: 47.96.173.142:9876
     sms:
-      signName: 快乐学习网
+      signName: 广告视频
       regionId: cn-beijing
       endpoint:
       endpointName: cn-beijing
