@@ -79,7 +79,7 @@ kcloud:
       expiredRemainMinutes: 20
       expiredMinutes: 120
   mail:
-    host: smtp.sina.com
+    host: smtp.163.com
     username: kuyuntech@163.com
     password: 13763393911
     test-connection: false
