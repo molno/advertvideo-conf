@@ -81,7 +81,7 @@ kcloud:
   mail:
     host: smtp.163.com
     username: kuyuntech@163.com
-    password: 13763393911
+    password: kuyuntech2016
     test-connection: false
     properties:
       mail:
