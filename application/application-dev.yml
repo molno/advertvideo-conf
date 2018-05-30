@@ -98,11 +98,11 @@ kcloud:
     rocketMq:
       namesrvAddr: 47.96.173.142:9876
     sms:
-      signName: 广告视频
-      regionId: cn-beijing
+      signName: 阿里云短信测试专用
+      regionId: cn-shenzhen
       endpoint:
-      endpointName: cn-beijing
-      product: 'your sms product'
+      endpointName: cn-shenzhen
+      product: Dysmsapi
       domain: dysmsapi.aliyuncs.com
   qiniu:
     key:
