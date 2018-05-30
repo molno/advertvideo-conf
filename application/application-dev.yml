@@ -98,7 +98,8 @@ kcloud:
     rocketMq:
       namesrvAddr: 47.96.173.142:9876
     sms:
-      signName: 阿里云短信测试专用
+      signName: 灵动视频
+      registerTemplateCode: SMS_135802426
       regionId: cn-shenzhen
       endpoint:
       endpointName: cn-shenzhen
