@@ -31,6 +31,9 @@ eureka:
     serviceUrl:
       defaultZone: http://admin:admin@localhost:8761/eureka/
 kcloud:
+  zookepeer:
+    hostname: localhost
+    port: 2181
   server:
     eureka:
       port: 8761
@@ -52,24 +55,28 @@ kcloud:
       hostname: localhost
       serviceUrl: http://localhost:8020
     provider:
-      ehc:
-        port: 8040
-        hostname: localhost
-      mdc:
-        port: 8030
-        hostname: localhost
-      omc:
-        port: 8050
-        hostname: localhost
-      opc:
-        port: 8070
-        hostname: localhost
-      tpc:
-        port: 8060
-        hostname: localhost
       uac:
         port: 8000
         hostname: localhost
+      opc:
+        port: 8030
+        hostname: localhost
+      tpc:
+        port: 8040
+        hostname: localhost
+      advideo:
+        port: 8051
+        hostname: localhost
+      adbid:
+        port: 8052
+        hostname: localhost
+      adfriends:
+        port: 8053
+        hostname: localhost
+      adprofit:
+        port: 8054
+        hostname: localhost
+
     web:
       mall:
         port: 9000
