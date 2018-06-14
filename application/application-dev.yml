@@ -10,7 +10,7 @@ spring:
     host: localhost
     password: 123456
     port: 6379
-    timeout: 0
+    timeout: 60000
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
