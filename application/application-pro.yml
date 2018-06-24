@@ -13,7 +13,7 @@ spring:
     timeout: 1000
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306
+    baseUrl: jdbc:mysql://localhost:3306
     username: root
     password: kcloud_mysql_aliyun113
     type: com.alibaba.druid.pool.DruidDataSource
