@@ -7,14 +7,15 @@ spring:
     username: guest
     password: guest
   redis:
-    host: 47.96.173.142
-    password: paascloud@redis
+    host: localhost
+    password: 123456
     port: 6379
-    timeout: 0
+    timeout: 1000
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    username: paascloud
-    password: 123456
+    url: jdbc:mysql://localhost:3306
+    username: root
+    password: kcloud_mysql_aliyun113
     type: com.alibaba.druid.pool.DruidDataSource
     initial-size: 10
     min-idle: 10
@@ -31,6 +32,9 @@ eureka:
     serviceUrl:
       defaultZone: http://admin:admin@localhost:8761/eureka/
 kcloud:
+  zookepeer:
+    hostname: localhost
+    port: 2181
   server:
     eureka:
       port: 8761
@@ -41,7 +45,7 @@ kcloud:
       hostname: localhost
       serviceUrl: http://localhost:8080
     gateway:
-      port: 80
+      port: 8888
       hostname: localhost
     monitor:
       port: 8010
@@ -52,24 +56,28 @@ kcloud:
       hostname: localhost
       serviceUrl: http://localhost:8020
     provider:
-      ehc:
-        port: 8040
-        hostname: localhost
-      mdc:
-        port: 8030
-        hostname: localhost
-      omc:
-        port: 8050
-        hostname: localhost
-      opc:
-        port: 8070
-        hostname: localhost
-      ptc:
-        port: 8060
-        hostname: localhost
       uac:
         port: 8000
         hostname: localhost
+      opc:
+        port: 8030
+        hostname: localhost
+      tpc:
+        port: 8040
+        hostname: localhost
+      advideo:
+        port: 8051
+        hostname: localhost
+      adbid:
+        port: 8052
+        hostname: localhost
+      adfriends:
+        port: 8053
+        hostname: localhost
+      adprofit:
+        port: 8054
+        hostname: localhost
+
     web:
       mall:
         port: 9000
@@ -79,9 +87,9 @@ kcloud:
       expiredRemainMinutes: 20
       expiredMinutes: 120
   mail:
-    host: smtp.sina.com
-    username: 'your email address'
-    password: 'your email password'
+    host: smtp.163.com
+    username: kuyuntech@163.com
+    password: kuyuntech2016
     test-connection: false
     properties:
       mail:
@@ -93,16 +101,17 @@ kcloud:
             required: true
   aliyun:
     key:
-      accessKeyId: 'your aliyun accessKeyId'
-      accessKeySecret: 'your aliyun accessKeySecret'
+      accessKeyId: LTAI2flAE5PmIbSC
+      accessKeySecret: NVK3zlsUCZddv0M8fG9NVXydWK3IwR
     rocketMq:
       namesrvAddr: 47.96.173.142:9876
     sms:
-      signName: 快乐学习网
-      regionId: cn-beijing
+      signName: 灵动视频
+      registerTemplateCode: SMS_135802426
+      regionId: cn-shenzhen
       endpoint:
-      endpointName: cn-beijing
-      product: 'your sms product'
+      endpointName: cn-shenzhen
+      product: Dysmsapi
       domain: dysmsapi.aliyuncs.com
   qiniu:
     key:
