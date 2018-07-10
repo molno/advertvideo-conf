@@ -15,8 +15,8 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     baseUrl: jdbc:mysql://119.23.43.113:3306
     username: root
-    # password: kcloud_mysql_aliyun113
-    password:  
+    password: kcloud_mysql_aliyun113
+    # password:  
     type: com.alibaba.druid.pool.DruidDataSource
     initial-size: 10
     min-idle: 10
