@@ -104,7 +104,7 @@ kcloud:
       accessKeyId: LTAI2flAE5PmIbSC
       accessKeySecret: NVK3zlsUCZddv0M8fG9NVXydWK3IwR
     rocketMq:
-      namesrvAddr: 47.96.173.142:9876
+      namesrvAddr: 119.23.43.113:9876
     sms:
       signName: 灵动视频
       registerTemplateCode: SMS_135802426
