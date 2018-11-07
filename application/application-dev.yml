@@ -10,7 +10,7 @@ spring:
     host: 119.23.43.113
     password: kcloud_2016
     port: 6379
-    timeout: 1000
+    timeout: 5000
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     baseUrl: jdbc:mysql://119.23.43.113:3306
